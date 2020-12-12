@@ -4,3 +4,7 @@ Proyecto curso Giweb React consumiendo la api de rick and morty (https://rickand
 
 ## Autor
 - Sergio David Paez Suarez
+
+## Vistas
+- Home Provisional
+![Menu](doc/Main.png)
