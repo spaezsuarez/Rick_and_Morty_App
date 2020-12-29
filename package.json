@@ -1,7 +1,7 @@
 {
-  "name": "tienda",
+  "name": "Rick_And_Morty_App",
   "version": "0.0.0",
-  "description": "Maqueta de una e-commerce hecha en react",
+  "description": "Pagina para consumir la api de Rick and Morty",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -30,7 +30,6 @@
     "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",
-    "sweetalert2": "^10.10.1",
     "webpack-cli": "^4.1.0"
   },
   "devDependencies": {
