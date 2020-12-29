@@ -1,0 +1,27 @@
+.title{
+    width: 100%;
+    height: 495px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title_h2{
+    animation: normal;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: error;
+}
+
+@keyframes error{
+    from{
+        transform:scale(1);
+        opacity: 0.1;
+    }
+
+    to{
+        transform:scale(2);
+        opacity: 1;
+    }
+}

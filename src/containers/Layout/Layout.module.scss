@@ -1,0 +1,24 @@
+.nFooter {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  background-color: #212529;
+  color: white;
+  height: 50px;
+  position: static;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+}
+
+.nFooter > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nFooter > a:hover {
+  text-decoration: underline;
+}
