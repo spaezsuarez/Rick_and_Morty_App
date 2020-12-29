@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //Funciones
 import { getCharacters } from "../utils/Request";
 import useFormControl from '../hooks/useFormControl';
 import useInputControl from '../hooks/useInputControl';
+import useFetch from '../hooks/useFetch';
 //Componentes
 import Form from "react-bootstrap/Form";
 import CharacterList from "../components/CharacterList/CharacterList";
@@ -11,13 +12,7 @@ import CharacterFilters from "../components/CharacterFilters/CharacterFilters";
 
 const Characters = () => {
 
-  //Variables de estado
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [page, setPage] = useInputControl(1);
-  
-  //Creación de filtros
   const [filters, setFilters, onSubmit] = useFormControl({
     name: "",
     status: "",
@@ -25,30 +20,7 @@ const Characters = () => {
     gender: "",
   });
 
-  //Funcion para llamar los datos
-  const getData = (params) => {
-    setLoading(true);
-    getCharacters(params)
-      .then((resData) => {
-        setError(null);
-        setData(resData);
-        setLoading(false);
-      })
-      .catch((resError) => {
-        setData(null);
-        setError(resError);
-        setLoading(false);
-      });
-  };
-
-  // filosofía: Realizar operaciones para SINCRONIZAR el estado
-  useEffect(() => {
-    getData({ page });
-  }, [page]);
-
-  const handleSubmit = (e) => {
-    getData({ page, ...filters });
-  };
+  const {data,loading,error,reFetch} = useFetch(() => getCharacters({page,...filters}),[page]);
 
   return (
     <>
@@ -74,7 +46,7 @@ const Characters = () => {
       <CharacterFilters
         filters={filters}
         onChange={setFilters}
-        onSubmit={onSubmit(handleSubmit)}
+        onSubmit={onSubmit(reFetch)}
       />
 
       {loading ? (
