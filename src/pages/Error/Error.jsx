@@ -1,11 +1,13 @@
 import React from "react";
-import styles from './Error.module.css';
+import errorStyles from './Error.module.scss';
+import usePageTitle from '../../hooks/usePageTitle';
 
 const Error = () => {
+  usePageTitle('404 NOT FOUND');
   return (
-    <div className={styles.title}>
-      <h2 className={styles.title_h2}>404 NOT FOUND</h2>
-    </div>
+    <section className={errorStyles.title}>
+      <h2>404 NOT FOUND</h2>
+    </section>
   );
 };
 
