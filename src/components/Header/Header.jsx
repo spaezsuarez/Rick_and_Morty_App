@@ -7,11 +7,11 @@ const Header = () => {
   return (
     <>
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand as={NavLink} exact to="/home">Rick And Morty App</Navbar.Brand>
+        <Navbar.Brand as={NavLink} exact to="/">Rick And Morty App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link as={NavLink} to="/characthers">Personajes</Nav.Link>
+            <Nav.Link as={NavLink} to="/characters">Personajes</Nav.Link>
           </Nav>
 
         </Navbar.Collapse>
