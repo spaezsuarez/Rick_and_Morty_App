@@ -59,8 +59,7 @@ const Characters = () => {
             <div className="col-sm-4">
               <Form.Text className="text-muted">
                 <center>
-                  Tener en cuenta que maximo se pueden ver {data.info.pages}{" "}
-                  paginas.
+                  Tener en cuenta que maximo se pueden ver {data.info.pages} paginas.
                 </center>
               </Form.Text>
             </div>
