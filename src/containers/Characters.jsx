@@ -6,8 +6,8 @@ import useInputControl from '../hooks/useInputControl';
 import useFetch from '../hooks/useFetch';
 //Componentes
 import Form from "react-bootstrap/Form";
-import CharacterList from "../components/CharacterList/CharacterList";
-import CharacterFilters from "../components/CharacterFilters/CharacterFilters";
+import CharacterList from "../components/Character/CharacterList/CharacterList";
+import CharacterFilters from "../components/Character/CharacterFilters/CharacterFilters";
 
 
 const Characters = () => {
