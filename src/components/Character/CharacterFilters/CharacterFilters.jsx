@@ -6,8 +6,8 @@ const CharacterFilters = ({filters,onChange,onSubmit}) => {
   return (
     <div className="row justify-content-center">
       <div className="col-sm-4">
-        <Form onSubmit={onSubmit}>
-          <Form.Group>
+        <Form className="justify-content-center" onSubmit={onSubmit}>
+          <Form.Group inline>
             <Form.Control
               type="text"
               placeholder="Ingrese el nombre del personaje"
