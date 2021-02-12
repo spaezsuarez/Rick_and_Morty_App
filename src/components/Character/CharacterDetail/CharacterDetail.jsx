@@ -1,6 +1,7 @@
 import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
+import styles from './CharacterDetail.module.scss';
 
 const CharacterDetail = ({name,image,origin,species,gender,status}) => {
     return <div className="container-fluid">
@@ -9,7 +10,8 @@ const CharacterDetail = ({name,image,origin,species,gender,status}) => {
                 <h1>{name}</h1>
             </div>
             <div  className="d-flex justify-content-center">
-                <Image src={image} alt={name} roundedCircle />
+                {(status === 'Alive')?<Image src={image} alt={name} roundedCircle />:<Image className={styles.img} src={image} alt={name} roundedCircle />}
+                
             </div>
         </Jumbotron>
         <hr></hr>

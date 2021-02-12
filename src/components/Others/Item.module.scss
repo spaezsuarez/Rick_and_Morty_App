@@ -1,0 +1,23 @@
+.container_item{
+    border-radius:30px;
+    border:1px solid black;
+    width:400px;
+    height: 450px;
+    overflow: hidden;
+    margin-right:60px;
+    margin-left:40px;
+    display: inline-block;
+    transition: 450ms all;
+    position: relative;
+    padding:2% 5% 5% 5%;
+}
+
+.container_item:hover{
+    transform:scale(1.2);
+    cursor: pointer;
+}
+
+.img_item{
+    width: 250px;
+    height: 200px;
+}
