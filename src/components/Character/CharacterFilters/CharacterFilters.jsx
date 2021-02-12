@@ -1,64 +1,64 @@
 import React from 'react';
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 
-const CharacterFilters = ({filters,onChange,onSubmit}) => {
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+
+function CharacterFilters({ inputs, onChange, onSubmit, readOnly = false }) {
   return (
-    <div className="row justify-content-center">
-      <div className="col-sm-4">
-        <Form className="justify-content-center" onSubmit={onSubmit}>
-          <Form.Group inline>
-            <Form.Control
-              type="text"
-              placeholder="Ingrese el nombre del personaje"
-              value={filters.name}
-              name="name"
-              onChange={onChange}
-            />
+    <Form inline className="justify-content-center" onSubmit={onSubmit}>
+      <FormControl
+        readOnly={readOnly}
+        className="mb-1 mr-sm-2"
+        name="name"
+        placeholder="name"
+        value={inputs.name}
+        onChange={onChange}
+      />
 
-            <Form.Control
-              type="text"
-              name="species"
-              placeholder="Ingrese la especie"
-              value={filters.species}
-              onChange={onChange}
-            />
-            <hr></hr>
-            <Form.Control
-              as="select"
-              name="status"
-              value={filters.status}
-              onChange={onChange}
-            >
-              <option value="">Seleccione un estatus</option>
-              <option value="Alive">alive</option>
-              <option value="Dead">Dead</option>
-              <option value="Unknown">Unknown</option>
-            </Form.Control>
+      <FormControl
+        readOnly={readOnly}
+        className="mb-1 mr-sm-2"
+        as="select"
+        name="status"
+        value={inputs.status}
+        onChange={onChange}
+      >
+        <option value="">Status</option>
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </FormControl>
 
-            <Form.Control
-              as="select"
-              name="gender"
-              value={filters.gender}
-              onChange={onChange}
-            >
-              <option value="">Seleccione un sexo</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Genderless">GenderLess</option>
-              <option value="unknown">Unknown</option>
-            </Form.Control>
-          </Form.Group>
-          <br></br>
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <Button variant="primary" type="submit" size="lg" block>
-              Enviar
-            </Button>
-          </div>
-        </Form>
-      </div>
-    </div>
+      <FormControl
+        readOnly={readOnly}
+        className="mb-1 mr-sm-2"
+        name="species"
+        placeholder="species"
+        value={inputs.species}
+        onChange={onChange}
+      />
+
+      <FormControl
+        readOnly={readOnly}
+        className="mb-1 mr-sm-2"
+        as="select"
+        name="gender"
+        value={inputs.gender}
+        onChange={onChange}
+      >
+        <option value="">Gender</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Genderless">Genderless</option>
+        <option value="unknown">Unknown</option>
+      </FormControl>
+
+      <Button type="submit" variant="primary">
+        Search
+      </Button>
+    </Form>
   );
-};
+}
 
 export default CharacterFilters;

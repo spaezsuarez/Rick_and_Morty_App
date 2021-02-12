@@ -11,16 +11,14 @@ const CharacterDetail = ({name,image,origin,species,gender,status}) => {
             </div>
             <div  className="d-flex justify-content-center">
                 {(status === 'Alive')?<Image src={image} alt={name} roundedCircle />:<Image className={styles.img} src={image} alt={name} roundedCircle />}
-                
             </div>
-        </Jumbotron>
-        <hr></hr>
-        <ul>
+            <hr/>
+            <ul>
             <li>Especie: {species}</li>
             <li>Genero: {gender}</li>
             <li>Origen: {origin.name}</li>
         </ul>
-
+        </Jumbotron>
     </div>
 }
 

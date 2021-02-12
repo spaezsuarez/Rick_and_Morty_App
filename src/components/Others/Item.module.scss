@@ -1,6 +1,6 @@
 .container_item{
     border-radius:30px;
-    border:1px solid black;
+    border:3px solid #df691a;
     width:400px;
     height: 450px;
     overflow: hidden;
@@ -20,4 +20,8 @@
 .img_item{
     width: 250px;
     height: 200px;
+}
+
+.button{
+    border-radius: 30px;
 }

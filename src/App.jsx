@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootswatch/dist/superhero/bootstrap.min.css';
 
 import Layout from './components/Shared/Layout/Layout';
 import Home from "./pages/Home/Home";

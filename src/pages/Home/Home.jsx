@@ -17,33 +17,31 @@ const Home = () => {
             <hr />
             <p className={styles.ptext}>
                 Esta es una pagina hecha como proyecto para el curso de giweb-react 2020,consumiendo la api de rick and Morty
-            Se puede consultar màs información sobre la api en (<a className={styles.a_home} >https://rickandmortyapi.com</a>).
+            Se puede consultar màs información sobre la api en <a href="https://rickandmortyapi.com" className={styles.a_home} >Aqui</a>.
         </p>
         </div>
 
         <div className="position-reltive overflow-hidden p-3 p-md-5 m-md-3 text-center">
             <div className="row">
-                <div class="row">
-                    <div class="col-4">
+                    <div className="col-4">
                         <Item title="Personajes" alt="Personajes" image={imagenUno}
-                            text=" La pagina provee información  basica sobre personajes de la serie, y los capitulos en los que salen."
+                            text="Podras ver información basica sobre personajes de la serie, y los capitulos en los que salen."
                             route="/characters"
                         />
                     </div>
-                    <div class="col-4">
+                    <div className="col-4">
                         <Item title="Episodios" alt="Personajes" image={imagenDos}
-                            text=" La pagina provee información  los episodios de la serie."
-                            route="/characters"
+                            text="Si necesitas información tecnica de los episodios aqui la podras encontrar."
+                            route="/episodes"
                         />
                     </div>
-                    <div class="col-4">
+                    <div className="col-4">
                         <Item title="Lugares" alt="Personajes" image={imagenTres}
-                            text=" La pagina provee información  basica sobre personajes de la serie, y los capitulos en los que salen."
-                            route="/characters"
+                            text="Podras saber más sobre los lugares que hacen parte de este universo."
+                            route="/locations"
                         />
                     </div>
                 </div>
-            </div>
             </div>
             
         </>
