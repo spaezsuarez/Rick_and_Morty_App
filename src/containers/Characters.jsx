@@ -1,12 +1,13 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 //Funciones
 import { getCharacters } from "../utils/Request";
 import useFormControl from '../hooks/useFormControl';
 import useFetch from '../hooks/useFetch';
 //Componentes
-import CharacterList from "../components/Character/CharacterList/CharacterList";
+import ListGrid from '../components/Shared/ListGrid/ListGrid';
 import CharacterFilters from "../components/Character/CharacterFilters/CharacterFilters";
 import PaginationBar from '../components/Shared/PaginationBar/PaginationBar';
+import CharacterCard from '../components/Character/CharacterCard/CharacterCard';
 
 const Characters = () => {
 
@@ -54,7 +55,12 @@ const Characters = () => {
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (
             <>
-              <CharacterList items={data.results} />
+              <ListGrid>
+                {data.results.map(item => (
+                  <CharacterCard key={item.id} {...item} />
+                ))}
+              </ListGrid>
+
             </>
           )}
     </>
