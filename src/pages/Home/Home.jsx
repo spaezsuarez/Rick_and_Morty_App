@@ -2,9 +2,9 @@ import React from 'react';
 import usePageTitle from '../../hooks/usePageTitle';
 import styles from './Home.module.scss';
 import Item from '../../components/Others/Item';
-import imagenUno from '../../../assets/rick-y-morty.jpg';
-import imagenDos from '../../../assets/dos.jpg';
-import imagenTres from '../../../assets/tres.jpg';
+import imagenUno from '../../../assets/Home/rick-y-morty.jpg';
+import imagenDos from '../../../assets/Home/dos.jpg';
+import imagenTres from '../../../assets/Home/tres.jpg';
 
 
 const Home = () => {
