@@ -12,8 +12,8 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link as={NavLink} to="/characters">Personajes</Nav.Link>
-            <Nav.Link as={NavLink} to="/characters">Episodios</Nav.Link>
-            <Nav.Link as={NavLink} to="/characters">Lugares</Nav.Link>
+            <Nav.Link as={NavLink} to="/episodes">Episodios</Nav.Link>
+            <Nav.Link as={NavLink} to="/locations">Lugares</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
