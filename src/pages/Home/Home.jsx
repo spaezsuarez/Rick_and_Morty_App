@@ -17,7 +17,7 @@ const Home = () => {
             <hr />
             <p className={styles.ptext}>
                 Esta es una pagina hecha como proyecto para el curso de giweb-react 2020,consumiendo la api de rick and Morty
-            Se puede consultar màs información sobre la api en <a href="https://rickandmortyapi.com" className={styles.a_home} >Aqui</a>.
+                <br />Se puede consultar màs información sobre la api en <a href="https://rickandmortyapi.com" className={styles.a_home} >Aqui</a>.
         </p>
         </div>
 
