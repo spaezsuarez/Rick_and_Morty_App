@@ -12,3 +12,8 @@ export const getCharacters = ({page = ' ' , name = ' ', status = ' ', species = 
 export const getCharacter = (id = 0) =>{
   return RickApi.get(`character/${id}`);
 }
+
+export const getEpisodes = ({page = ''}) => {
+  const params = new URLSearchParams({ page });
+  return RickApi.get(`episode?${params}`);
+}
