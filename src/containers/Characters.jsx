@@ -8,6 +8,7 @@ import ListGrid from '../components/Shared/ListGrid/ListGrid';
 import CharacterFilters from "../components/Character/CharacterFilters/CharacterFilters";
 import PaginationBar from '../components/Shared/PaginationBar/PaginationBar';
 import CharacterCard from '../components/Character/CharacterCard/CharacterCard';
+import Loading from '../components/Shared/Loading/Loading';
 
 const Characters = () => {
 
@@ -50,7 +51,7 @@ const Characters = () => {
         onChangePage={setPage}
       />
       {loading ? (
-        <p>loading...</p>
+        <Loading title="Cargando"/>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (

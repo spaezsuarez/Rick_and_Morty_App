@@ -5,6 +5,7 @@ import styles from './EpisodeCard.module.scss';
 import imgUno from '../../../../assets/Episode/1.png';
 import imgDos from '../../../../assets/Episode/2.png';
 import imgTres from '../../../../assets/Episode/3.png';
+import imgCuatro from '../../../../assets/Episode/4.png';
 
 const getImageSeason = (episode) => {
     let season = episode.substring(0, 3);
@@ -16,9 +17,9 @@ const getImageSeason = (episode) => {
         case "S03":
             return imgTres;
         case "S04":
-            return imgDos;
+            return imgCuatro;
         default:
-            return imgDos;
+            return imgUno;
     }
 }
 

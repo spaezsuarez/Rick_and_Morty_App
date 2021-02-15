@@ -13,7 +13,7 @@ export const getCharacter = (id = 0) =>{
   return RickApi.get(`character/${id}`);
 }
 
-export const getEpisodes = ({page = ''}) => {
-  const params = new URLSearchParams({ page });
+export const getEpisodes = ({page = '',name = ''}) => {
+  const params = new URLSearchParams({ page,name });
   return RickApi.get(`episode?${params}`);
 }
