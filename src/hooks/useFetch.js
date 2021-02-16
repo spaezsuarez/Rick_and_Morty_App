@@ -20,6 +20,7 @@ const useFetch = (fn, deps = []) => {
 
     fn()
       .then(data => {
+        console.log(data);
         if (isMounted)
           setState({
             data,

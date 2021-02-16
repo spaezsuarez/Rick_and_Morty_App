@@ -2,7 +2,7 @@ import React from 'react';
 import useFetch from '../hooks/useFetch';
 import { getCharacter } from '../utils/Request';
 import CharacterDetail from '../components/Character/CharacterDetail/CharacterDetail';
-
+import Loading from '../components/Shared/Loading/Loading';
 
 const CharacterDetails = ({ id }) => {
 
@@ -13,11 +13,13 @@ const CharacterDetails = ({ id }) => {
   return (
     <>
       {loading ? (
-        <p>loading...</p>
+        <Loading title="Cargando"/>
       ) : error ? (
         <p>Ha ocurrido un error ({error.message})</p>
       ) : (
-          <CharacterDetail {...data} />
+          <>
+           <CharacterDetail {...data} />
+          </>
           )
       }
     </>

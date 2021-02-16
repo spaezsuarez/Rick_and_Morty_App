@@ -20,7 +20,8 @@ const Episodes = () => {
   const { data, loading, error } = useFetch(() => getEpisodes({ page,...input} ), [page,input.name]);
 
   return <>
-
+    <br />
+    <div className="d-flex justify-content-center">
     <Form>
       <FormControl
         className="mb-1 mr-sm-2"
@@ -30,6 +31,7 @@ const Episodes = () => {
         onChange={handleChange}
       />
     </Form>
+    </div>
 
     <PaginationBar
       readOnly={loading}
@@ -43,13 +45,11 @@ const Episodes = () => {
       <p>Ha ocurrido un error ({error.message})</p>
     ) : (
           <>
-          <div className="position-reltive overflow-hidden p-3 p-md-5 m-md-3">
           <ListGrid>
               {data.results.map(item => (
                 <EpisodeCard key={item.id} {...item} />
               ))}
             </ListGrid>
-          </div>
           </>
         )}
   </>

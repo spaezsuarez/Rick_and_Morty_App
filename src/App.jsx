@@ -7,6 +7,7 @@ import Error from "./pages/Error/Error";
 import CharactersPage from "./pages/CharactersPage/CharactersPage";
 import CharacterPageDetail from './pages/CharactersDetail/CharacterPageDetail';
 import EpisodesPage from './pages/EpisodesPage/EpisodesPage';
+import EpisodePageDetail from './pages/EpisodeDetailPage/EpisodeDetailPage';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ const App = () => {
           <Route exact path="/characters" component={CharactersPage}></Route>
           <Route exact path='/character/:id' component={CharacterPageDetail}></Route>
           <Route exact path='/episodes' component={EpisodesPage}></Route>
+          <Route exact path='/episode/:idEp' component={EpisodePageDetail}></Route>
           <Route component={Error}></Route>
         </Switch>
       </Layout>

@@ -17,3 +17,7 @@ export const getEpisodes = ({page = '',name = ''}) => {
   const params = new URLSearchParams({ page,name });
   return RickApi.get(`episode?${params}`);
 }
+
+export const getEpisode = ({id = ' '}) => {
+  return RickApi.get(`episode/${id}`);
+}

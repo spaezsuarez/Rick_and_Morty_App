@@ -4,8 +4,6 @@ import Image from 'react-bootstrap/Image';
 import styles from './CharacterDetail.module.scss';
 
 const CharacterDetail = ({name,image,origin,species,gender,status}) => {
-
-    console.log(origin);
     
     return <div className="container-fluid">
         <Jumbotron>
