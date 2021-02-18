@@ -1,6 +1,6 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
-import { getEpisode,getCharacters } from '../utils/Request';
+import { getEpisode } from '../utils/Request';
 import EpisodeDetail from '../components/Episodes/EpisodeDetail/EpisodeDetail';
 import Loading from '../components/Shared/Loading/Loading';
 

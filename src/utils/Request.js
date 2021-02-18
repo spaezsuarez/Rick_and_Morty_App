@@ -1,4 +1,5 @@
 import HTTPClient from "./HTTPClient";
+import { getEndNumber } from './processUrl';
 
 export const BASE_URL = "https://rickandmortyapi.com/api/";
 const RickApi = new HTTPClient(BASE_URL);
@@ -11,6 +12,10 @@ export const getCharacters = ({page = ' ' , name = ' ', status = ' ', species = 
 
 export const getCharacter = (id = 0) =>{
   return RickApi.get(`character/${id}`);
+}
+
+export const getCharactersEpisode = (ids = '') => {
+  return RickApi.get(`character/${ids}`);
 }
 
 export const getEpisodes = ({page = '',name = ''}) => {
