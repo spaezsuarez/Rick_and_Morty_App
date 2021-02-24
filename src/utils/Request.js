@@ -31,5 +31,6 @@ export const getLocations = ({page = '',type = '',dimension = ''}) => {
 }
 
 export const getLocation = ({id = ''}) => {
+  console.log('Id desde la función: ' + id);
   return RickApi.get(`location/${id}`);
 }

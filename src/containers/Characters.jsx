@@ -9,6 +9,7 @@ import CharacterFilters from "../components/Character/CharacterFilters/Character
 import PaginationBar from '../components/Shared/PaginationBar/PaginationBar';
 import CharacterCard from '../components/Character/CharacterCard/CharacterCard';
 import Loading from '../components/Shared/Loading/Loading';
+import Error from '../pages/Error/Error';
 
 const Characters = () => {
 
@@ -30,14 +31,6 @@ const Characters = () => {
   return (
     <>
       <br />
-      <div className="row justify-content-center">
-        <div className="col-sm-4">
-          <center>
-            <h3>Ver Personajes</h3>
-          </center>
-        </div>
-      </div>
-      <br />
       <CharacterFilters
         readOnly={loading}
         inputs={filters}
@@ -53,12 +46,12 @@ const Characters = () => {
       {loading ? (
         <Loading title="Cargando"/>
       ) : error ? (
-        <p>Ha ocurrido un error ({error.message})</p>
+        <Error></Error>
       ) : (
             <>
               <ListGrid>
                 {data.results.map(item => (
-                  <CharacterCard key={item.id} {...item} />
+                  <CharacterCard key={item.id} {...item} background="primary" />
                 ))}
               </ListGrid>
 

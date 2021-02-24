@@ -1,10 +1,10 @@
 import React from 'react';
 import usePageTitle from '../../hooks/usePageTitle';
-import Locations from '../../containers/Locations.jsx';
+import LocationContainer from '../../containers/LocationContainer';
 
 const LocationsPage = () => {
     usePageTitle('Locations');
-    return <Locations />
+    return <LocationContainer />
 }
 
 export default LocationsPage;

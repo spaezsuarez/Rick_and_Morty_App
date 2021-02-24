@@ -34,7 +34,7 @@ const EpisodeDetail = ({ id, name, air_date, episode, characters }) => {
             <ListGrid>
             {
                 data.map((personaje) => {
-                    return <CharacterCard {...personaje} />
+                    return <CharacterCard key={personaje.id} {...personaje}  background="danger" />
                 })
             }
             </ListGrid>
