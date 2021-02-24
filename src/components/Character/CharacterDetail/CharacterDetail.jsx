@@ -2,8 +2,6 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
 import styles from './CharacterDetail.module.scss';
-import ListGrid from '../../Shared/ListGrid/ListGrid';
-import { getIds } from '../../../utils/processUrl';
 
 const CharacterDetail = ({ name, image, origin, species, gender, status }) => {
 

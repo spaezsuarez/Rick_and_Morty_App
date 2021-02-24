@@ -20,7 +20,7 @@ const useFetch = (fn, deps = []) => {
 
     fn()
       .then(data => {
-        console.log(data)
+        console.log(data);
         if (isMounted)
           setState({
             data,
@@ -29,6 +29,7 @@ const useFetch = (fn, deps = []) => {
           });
       })
       .catch(error => {
+        console.log(error);
         if (isMounted)
           setState({
             data: null,

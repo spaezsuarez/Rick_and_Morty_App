@@ -4,7 +4,7 @@ export const getEndNumber = (URL) => {
     if (isNaN(num)) return 0;
   
     return num;
-  }
+}
 
 export const getIds = (list = []) => {
     let value = '';
