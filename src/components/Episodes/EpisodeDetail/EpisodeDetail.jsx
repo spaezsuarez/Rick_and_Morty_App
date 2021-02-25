@@ -6,13 +6,13 @@ import { getCharactersEpisode } from '../../../utils/Request';
 import { getIds } from '../../../utils/processUrl';
 import CharacterCard from '../../Character/CharacterCard/CharacterCard';
 import Loading from '../../Shared/Loading/Loading';
-
-
+import Error from '../../../pages/Error/Error';
 
 const EpisodeDetail = ({ id, name, air_date, episode, characters }) => {
+    
     const { data, loading, error } = useFetch(() => getCharactersEpisode(getIds(characters)), []);
     return <>
-        <div className="container-fluid">
+        <div className="container">
             <Jumbotron>
                 <div className="d-flex justify-content-center">
                     <h1>{name}</h1>
@@ -27,10 +27,12 @@ const EpisodeDetail = ({ id, name, air_date, episode, characters }) => {
         {loading ? (
             <Loading title="Cargando" />
         ) : error ? (
-            <p>Ha ocurrido un error ({error.message})</p>
+            <Error></Error>
         ) : (
             <>
-            <h3>Personajes que participarón en el capitulo </h3>
+            <div className="d-flex justify-content-center">
+                <h3>Personajes que participarón en el capitulo </h3>
+            </div>
             <ListGrid>
             {
                 data.map((personaje) => {

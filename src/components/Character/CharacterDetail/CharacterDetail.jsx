@@ -2,8 +2,17 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Image from 'react-bootstrap/Image';
 import styles from './CharacterDetail.module.scss';
+import Loading from '../../Shared/Loading/Loading';
+import useFetch from '../../../hooks/useFetch';
+import Error from '../../../pages/Error/Error';
+import ListGrid from '../../Shared/ListGrid/ListGrid';
+import { getIds } from '../../../utils/processUrl';
+import { getEpisodesByCharacter } from '../../../utils/Request';
+import LocationCard from '../../Locations/LocationCard/LocationCard';
 
-const CharacterDetail = ({ name, image, origin, species, gender, status }) => {
+const CharacterDetail = ({ name, image, origin, species, gender, status,episode }) => {
+
+    const { data, loading, error } = useFetch(() => getEpisodesByCharacter(getIds(episode)), []);
 
     return <div className="container-fluid">
         <Jumbotron>
@@ -27,6 +36,27 @@ const CharacterDetail = ({ name, image, origin, species, gender, status }) => {
                 <li>Status: {status}</li>
             </ul>
         </Jumbotron>
+
+        {loading ? (
+            <Loading title="Cargando" />
+        ) : error ? (
+            <Error></Error>
+        ) : (
+            <>
+            <div className="d-flex justify-content-center">
+                <h3>Episodios en los que aparece el personaje </h3>
+            </div>
+            <ListGrid>
+            {
+                data.map((e) => {
+                    if(e.name !== 'unknown')
+                        return <LocationCard key={e.id} {...e}  />
+                })
+            }
+            </ListGrid>
+            </>
+            )
+        }
 
     </div>
 }

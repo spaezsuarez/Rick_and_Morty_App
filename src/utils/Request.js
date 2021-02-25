@@ -31,6 +31,13 @@ export const getLocations = ({page = '',type = '',dimension = ''}) => {
 }
 
 export const getLocation = ({id = ''}) => {
-  console.log('Id desde la función: ' + id);
   return RickApi.get(`location/${id}`);
+}
+
+export const getEpisodesByCharacter = (ids = '') => {
+  return RickApi.get(`location/${ids}`);
+}
+
+export const getCharactersByLocation = (ids='') => {
+  return RickApi.get(`character/${ids}`);
 }

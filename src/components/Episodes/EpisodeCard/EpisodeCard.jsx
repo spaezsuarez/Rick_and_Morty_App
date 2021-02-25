@@ -24,6 +24,7 @@ const getImageSeason = (episode) => {
 }
 
 const EpisodeCard = ({ id, name, air_date, episode }) => {
+
     return <>
         <Link to={`/episode/${id}`}>
             <Card bg="success" text="white" className="mb-2">
