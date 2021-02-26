@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 
-function CharacterFilters({ inputs, onChange, onSubmit, readOnly = false }) {
+const CharacterFilters = ({ inputs, onChange, onSubmit, readOnly = false }) => {
   return (
     <Form inline className="justify-content-center" onSubmit={onSubmit}>
       <FormControl

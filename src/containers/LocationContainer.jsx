@@ -5,15 +5,17 @@ import useFormControl from '../hooks/useFormControl';
 import useFetch from '../hooks/useFetch';
 //Componentes
 import ListGrid from '../components/Shared/ListGrid/ListGrid';
-//import CharacterFilters from "../components/Character/CharacterFilters/CharacterFilters";
+import LocationFilters from '../components/Locations/LocationFilters/LocationFilters';
 import PaginationBar from '../components/Shared/PaginationBar/PaginationBar';
 import LocationCard from '../components/Locations/LocationCard/LocationCard';
 import Loading from '../components/Shared/Loading/Loading';
 import Error from '../pages/Error/Error';
 
+
 const LocationsContainer = () => {
     const [page, setPage] = useState(1);
     const [filters, handleChange, handleSubmit] = useFormControl({
+        name:"",
         type:"",
         dimension:""
     });
@@ -25,6 +27,14 @@ const LocationsContainer = () => {
     };
 
     return <>
+      <br />
+       <LocationFilters
+        readOnly={loading}
+        inputs={filters}
+        onChange={handleChange}
+        onSubmit={handleSubmit(resetPage)}
+      />
+
         <PaginationBar
             readOnly={loading}
             current={page}

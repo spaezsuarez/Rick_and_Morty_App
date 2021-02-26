@@ -8,7 +8,7 @@ import EpisodeCard from '../components/Episodes/EpisodeCard/EpisodeCard';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Loading from '../components/Shared/Loading/Loading';
-
+import Error from '../pages/Error/Error';
 
 const Episodes = () => {
   //Variables de estado del contenedor de episodios
@@ -42,7 +42,7 @@ const Episodes = () => {
     {loading ? (
       <Loading title="Cargando" />
     ) : error ? (
-      <p>Ha ocurrido un error ({error.message})</p>
+      <Error></Error>
     ) : (
           <>
           <ListGrid>
