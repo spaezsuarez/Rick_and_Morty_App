@@ -20,10 +20,11 @@ const LocationsContainer = () => {
         dimension:""
     });
 
-    const { data, loading, error } = useFetch(() => getLocations({ page, ...filters }), [page]);
+    const { data, loading, error,reFetch } = useFetch(() => getLocations({ page, ...filters }), [page]);
 
     const resetPage = () => {
         setPage(1);
+        reFetch();
     };
 
     return <>
