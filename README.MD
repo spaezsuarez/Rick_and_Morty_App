@@ -18,6 +18,10 @@ El siguiente output deberia aparecer por terminal
 
 dirigirse a [localhost](http://127.0.0.1:4000/)
 
+## Aplicación desplegada
+
+Dirigirse a https://myapprickandmortysergio.netlify.app/
+
 ## Vistas
 - Home
 ![Menu](doc/Main.png)
